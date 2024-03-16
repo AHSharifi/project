@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(15, 15, 15);
+}
+
+menu {
+    background-color: rgb(33, 33, 33);
+    height: 75px;
+}
+
+menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+}
+
+menu ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-left: 10px;
+    color: rgb(226, 226, 0);
+    padding: 25px 5px;
+}
+
+menu ul li:hover {
+    border-bottom: 1px solid rgb(226, 226, 0);
+}
+
+.box {
+    background-color: rgb(33, 33, 33);
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.box img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.box h2 {
+    color: rgb(226, 226, 0);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.box p {
+    color: rgb(226, 226, 0);
+    margin: 5px 0;
+}
+
+.box .btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box button {
+    color: rgb(226, 226, 0);
+    border: 1px dashed rgb(226, 226, 0);
+    border-radius: 25px;
+}
+
+.box button:hover {
+    background-color: rgb(226, 226, 0);
+}
