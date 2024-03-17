@@ -86,3 +86,19 @@ menu ul li:hover {
 .box button:hover {
     background-color: rgb(226, 226, 0);
 }
+
+#box h1 {
+    color: rgb(226, 226, 0);
+}
+
+#box p {
+    color: rgb(226, 226, 0);
+}
+
+#box select {
+    margin: 10px 5px;
+}
+
+#box img {
+    display: block;
+}
