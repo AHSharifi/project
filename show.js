@@ -1,11 +1,12 @@
 const urlParams = new URLSearchParams(window.location.search);
 const itemId = urlParams.get('id');
+const cart = [];
 
 fetch('./config.json')
   .then(response => response.json())
   .then(data => {
 
-    const ul = document.getElementById('menu')
+    const ul = document.getElementById('menu');
     data.menu.forEach(item => {
       const li = document.createElement('li');
       li.textContent = item;
@@ -30,7 +31,7 @@ fetch('./config.json')
         <select id="sizeSelect">
           ${
             item.size.map(size => {
-              return `<option>${size}</option>`
+              return `<option>${size}</option>`;
             }).join('')
           }
         </select>
@@ -38,21 +39,25 @@ fetch('./config.json')
         <button id="btn">Add to cart</button>
       `;
 
-      const btn = document.getElementById('btn')
+      const btn = document.getElementById('btn');
       btn.addEventListener('click', () => {
-        const colorValue = document.getElementById('colorSelect').value
-        const sizeValue = document.getElementById('sizeSelect').value
+        const colorValue = document.getElementById('colorSelect').value;
+        const sizeValue = document.getElementById('sizeSelect').value;
 
-        const cart = {
+        const product = {
           name: document.getElementsByTagName('h1')[0].textContent,
           price: document.getElementsByTagName('p')[1].textContent,
           color: colorValue,
           size: sizeValue,
           img: document.getElementsByTagName('img')[0].src
-        }
-      })
+        };
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        location.href = "cart.html";
+        JSON.parse(localStorage.getItem('cart')) || [];
+      });
     } else {
-      alert('item not found!')
+      alert('item not found!');
       console.error('آیتم مورد نظر یافت نشد');
     }
   })

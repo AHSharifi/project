@@ -43,6 +43,7 @@ fetch('./config.json')
         var parentId = e.target.parentNode.parentNode.id
         location.href = `show.html?id=${parentId}`;
       })
+      JSON.parse(localStorage.getItem('cart')) || [];
     })
   })
   .catch(error => console.error('Error fetching JSON:', error));

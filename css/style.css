@@ -102,3 +102,7 @@ menu ul li:hover {
 #box img {
     display: block;
 }
+
+#cart h3 {
+    color: rgb(226, 226, 0);
+}
